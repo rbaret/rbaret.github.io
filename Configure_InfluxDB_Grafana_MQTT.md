@@ -171,7 +171,7 @@ if __name__ == '__main__':
 
 ```
 
-Try the python script to see if subscription is ok 
+Try the python script to see if subscription is ok
 
 ```shell
 python3 MQTTInfluxDBBridge.py
