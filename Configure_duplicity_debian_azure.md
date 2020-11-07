@@ -1,3 +1,7 @@
+layout: page
+title: "Configure Duplicity on Debian with Azure Blob storage"
+permalink: /configure-duplicity-debian-azure/
+
 # Configure Duplicity on Debian with Azure Blob storage
 
 ## Install Duplicity
