@@ -24,7 +24,7 @@ github_username:  rbaret
 
 # Build settings
 markdown: GFM
-theme: jekyll-theme-slate
+theme: minima
 plugins:
   - jekyll-feed
 
