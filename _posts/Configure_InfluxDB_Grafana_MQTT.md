@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Configure Grafana with InfluxDB and MQTT"
-permalink: /configure-grafana-influxdb-mqtt-debian/
+date: 2020-11-04 21:00:00 +0100
 categories: Debian Grafana InfluxDB MQTT Domotic
 ---
 
