@@ -1,11 +1,15 @@
-# Configure Grafana with InfluxDB and MQTT
+---
+layout: post
+title: "Configure Grafana with InfluxDB and MQTT"
+permalink: /configure-grafana-influxdb-mqtt-debian/
+categories: Debian Grafana InfluxDB MQTT Domotic
+---
 
 Following [DiyIOt](https://diyi0t.com/visualize-mqtt-data-with-influxdb-and-grafana/) instructions.
 
-- [Configure Grafana with InfluxDB and MQTT](#configure-grafana-with-influxdb-and-mqtt)
-  - [Install InfluxDB](#install-influxdb)
-  - [Configure MQTT bridge between InfluxDB and MQTT broker](#configure-mqtt-bridge-between-influxdb-and-mqtt-broker)
-  - [Install Grafana](#install-grafana)
+- [Install InfluxDB](#install-influxdb)
+- [Configure MQTT bridge between InfluxDB and MQTT broker](#configure-mqtt-bridge-between-influxdb-and-mqtt-broker)
+- [Install Grafana](#install-grafana)
 
 ## Install InfluxDB
 

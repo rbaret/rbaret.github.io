@@ -1,11 +1,9 @@
 ---
-layout: page
+layout: post
 title: "Configure Duplicity on Debian with Azure Blob storage"
 permalink: /configure-duplicity-debian-azure/
-categories: azure duplicity backup
+categories: azure duplicity backup tutorial
 ---
-
-# Configure Duplicity on Debian with Azure Blob storage
 
 ## Install Duplicity
 
