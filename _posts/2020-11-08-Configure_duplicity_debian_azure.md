@@ -10,8 +10,8 @@ You can use the same instructions for AWS S3 storage by replacing *AZ* by *AW* i
 
 ## Install Duplicity
 
-Instead of using the latest version I choose to use the one included in my Debian 9, which is in version 0.7.11. 
-Why ? Because azure-storage module is deprecated since its version 0.37 and has been split in 5, including the one we're interested in here : azure-storeage-blob.
+Instead of using the latest version I choose to use the one included in my Debian 9, which is in version 0.7.11.
+Why ? Because azure-storage module is deprecated since its version 0.37 and has been split in 5, including the one we're interested in here : azure-storage-blob.
 Unfortunately the support for this module is still not implemented in versions 0.8+
 
 ```bash
@@ -140,6 +140,9 @@ unset PASSPHRASE
 Now we setup the cron job to run daily :
 
 ```bash
+# Make the script file executable
+chmod 0700 ~/.duplicity/.backup.sh
+
 crontab -e
 ```
 
