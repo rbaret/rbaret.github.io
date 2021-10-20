@@ -98,14 +98,14 @@ duplicity full \
 / azure://yourcontainer
 ```
 
-The backup duration will highly depend of the storage and CPU speed. In my case, with an outdated Atom N2800 and 2GB of RAM it took 2 hours to backup 280k files eith an original size of 17GB and a final size of 11.6GB after compression.
+The backup duration will highly depend of the storage and CPU speed. In my case, with an outdated Atom N2800 and 2GB of RAM it took 2 hours to backup 280k files with an original size of 17GB and a final size of 11.6GB after compression.
 
 ## Automating the backup
 
 Let's create a small script that we will run every day. This script will run a full backup if the last full is older than 7 days, otherwise it will be an incremental.
 
-This job will also do a cleanup to keep only the last full and subsequent incrementals. This can be changed to keep more than 1 set of full backups (4 can be a good value as it represents a month of backups) at the cost of additional storage fees.
-It's also possible to keep only the last n full and remove all the incrementals older than the current set with the *remove-all-inc-of-but-n-full* command in conjunction with the *remove-all-but-n-full* command.
+This job will also do a cleanup to keep only the last full and subsequent incremental. This can be changed to keep more than 1 set of full backups (4 can be a good value as it represents a month of backups) at the cost of additional storage fees.
+It's also possible to keep only the last *n* full backups and remove all the incremental older than the current set with the *remove-all-inc-of-but-n-full* command in conjunction with the *remove-all-but-n-full* command.
 
 ```bash
 nano ~/.duplicity/.backup.sh
