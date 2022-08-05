@@ -1,18 +1,15 @@
 ---
 layout: post
 title: "Configure Duplicity on Debian with Azure Blob storage"
-date: 2020-11-08 01:45:00 +0100
+date: 2022-08-05 22:45:00 +0100
 categories: azure duplicity backup tutorial
+
 ---
 These instructions are based on [This work](https://www.digitalocean.com/community/tutorials/how-to-use-duplicity-with-gpg-to-back-up-data-to-digitalocean-spaces) by [Kathleen Juell](https://www.digitalocean.com/community/users/katjuell) from DigitalOcean
 
 You can use the same instructions for AWS S3 storage by replacing *AZ* by *AW* in environment variable names and by replacing *azure://* by *s3://* in destination
 
 ## Install Duplicity
-
-Instead of using the latest version I choose to use the one included in my Debian 9, which is in version 0.7.11.
-Why ? Because azure-storage module is deprecated since its version 0.37 and has been split in 5, including the one we're interested in here : azure-storage-blob.
-Unfortunately the support for this module is still not implemented in versions 0.8+
 
 ```bash
 # Install dependances
@@ -22,7 +19,7 @@ sudo apt install python python-boto3 python-dev pyhton-fasteners librsync1 librs
 sudo pip install azure-storage-blob
 
 # Install Duplicity
-sudo apt install duplicity
+pip install duplicity
 ```
 
 ## Configure GPG for encryption
