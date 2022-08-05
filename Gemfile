@@ -12,7 +12,7 @@ gem "jekyll", "~> 3.9.0"
 
 
 # Slate theme
-gem "jekyll-theme-slate", "~>0.1.1"
+gem "jekyll-theme-slate", "~>0.2.0"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
 
@@ -39,4 +39,4 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # kramdown v1, comment out this line.
 gem "kramdown-parser-gfm"
 
-gem "github-pages", "~> 209", group: :jekyll_plugins
+gem "github-pages", "~> 227", group: :jekyll_plugins
