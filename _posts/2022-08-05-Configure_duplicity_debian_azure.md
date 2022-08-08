@@ -69,8 +69,7 @@ nano ~/.duplicity/.env_variables.conf
 
 # Edit the file content :
 
-export AZ_ACCESS_KEY_ID="your-access-key"
-export AZ_SECRET_ACCESS_KEY="your-secret-key"
+export AZURE_CONNECTION_STRING="your-connection-string" # You can fetch this info from the storage account properties or via az CLI : az storage account show-connection-string --resource-group your-RSG-name --name your-account-name 
 export GPG_KEY="your-GPG-public-key-id" # Only the last 8 characters of the pub fingerprint
 export PASSPHRASE="your-GPG-key-passphrase"
 
@@ -89,7 +88,7 @@ Here is an example of a full backup of a whole server to an azure storage accoun
 ```bash
 duplicity full \
 --encrypt-sign-key=$GPG_KEY \
---volu-size=1000 \
+--vol-size=1000 \
 --log-file=/home/user/.duplicity/duplicity_$(date +"%Y%m%d_%I%M%p%S").log \
 --exclude=/proc --exclude=/sys --exclude=/tmp \
 / azure://yourcontainer
@@ -114,7 +113,7 @@ nano ~/.duplicity/.backup.sh
 #!/bin/bash
 
 HOME="/home/user"
-
+export PATH=$PATH:/usr/local/bin # Add local bin path so duplicity can be found when installed through pip
 source "$HOME/.duplicity/.env_variables.conf"
 
 duplicity \
@@ -128,8 +127,7 @@ duplicity \
 duplicity remove-all-but-n-full 1 --force
 # Uncomment the line below if you want to keep more thant 1 full and want to clean intermediate inc backups except the last chain
 # duplicity remove-all-inc-of-but-n-full 1
-unset AZ_ACCESS_KEY_ID
-unset AZ_SECRET_ACCESS_KEY
+unset AZURE_CONNECTION_STRING
 unset GPG_KEY
 unset PASSPHRASE
 ```
